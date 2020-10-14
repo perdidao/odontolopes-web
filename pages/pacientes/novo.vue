@@ -37,6 +37,7 @@
     <v-btn :disabled="loading" :loading="loading" @click="registerPatient"
       >Cadastrar</v-btn
     >
+    <nuxt-link to="/pacientes">Voltar para Pacientes</nuxt-link>
     <v-alert v-if="message.show" :type="message.type">
       {{ message.text }}
     </v-alert>

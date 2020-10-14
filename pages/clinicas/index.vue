@@ -1,7 +1,7 @@
 <template>
   <section class="patients">
-    <h1>Pacientes</h1>
-    <nuxt-link to="/pacientes/novo">Novo paciente</nuxt-link>
+    <h1>Clínicas</h1>
+    <nuxt-link to="/clinicas/nova">Nova clínica</nuxt-link>
     <nuxt-link to="/dashboard">Dashboard</nuxt-link>
 
     <v-alert v-if="message.show" :type="message.type">
@@ -18,9 +18,9 @@ export default {
   middleware: "private",
   data: () => ({
     loading: false,
-    endpoint: "patients",
+    endpoint: "clinics",
     messages: {
-      error: "Erro ao carregar os pacientes",
+      error: "Erro ao carregar as clínicas",
     },
     message: {
       show: false,
@@ -28,15 +28,13 @@ export default {
       text: "",
     },
     headers: [
-      { text: "Nome", value: "name" },
-      { text: "E-mail", value: "email" },
-      { text: "Telefone", value: "phone" },
-      { text: "Informações adicionais", value: "additional" },
+      { text: "Nome", value: "title" },
+      { text: "Endereço", value: "address" },
     ],
     items: [],
   }),
   head: {
-    title: "Odontolopes — Pacientes",
+    title: "Odontolopes — Clínicas",
   },
   mounted() {
     list(this);

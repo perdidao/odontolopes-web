@@ -13,7 +13,9 @@
       hide-details
       type="password"
     ></v-text-field>
-    <v-btn primary :disabled="loading" @click="submitLogin">Entrar</v-btn>
+    <v-btn primary :disabled="loading" :loading="loading" @click="submitLogin"
+      >Entrar</v-btn
+    >
     <v-alert v-if="message.show" :type="message.type">
       {{ message.text }}
     </v-alert>

@@ -1,8 +1,8 @@
 import Cookie from "js-cookie";
 
 export default function ({ redirect }) {
-  const loggedIn = Cookie.get("token") === undefined;
-  if (!loggedIn) {
+  const notLoggedIn = Cookie.get("token") === undefined;
+  if (notLoggedIn) {
     return redirect("/auth/login");
   }
 }

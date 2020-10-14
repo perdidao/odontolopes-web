@@ -1,6 +1,10 @@
 import Axios from "axios";
 import Cookie from "js-cookie";
 
+export const userToken = () => {
+  return Cookie.get("token");
+};
+
 export const login = (self) => {
   self.loading = true;
 

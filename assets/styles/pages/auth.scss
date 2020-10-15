@@ -1,0 +1,42 @@
+.auth {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+
+  &-container {
+    width: res(420);
+    padding: res(20);
+    border-radius: res(10);
+    background-color: $white;
+    box-shadow: 0 res(10) res(20) rgba(0, 0, 0, 0.2);
+
+    @media (max-width: $size-notebook) {
+      width: res(420, notebook);
+      padding: res(20, notebook);
+      border-radius: res(10, notebook);
+      box-shadow: 0 res(10, notebook) res(20, notebook) rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__logo {
+    display: block;
+    max-width: res(240);
+    margin: 0 auto res(20);
+
+    @media (max-width: $size-notebook) {
+      max-width: res(240, notebook);
+      margin: 0 auto res(20, notebook);
+    }
+  }
+
+  &__input.v-input {
+    margin: 0 0 res(15);
+
+    @media (max-width: $size-notebook) {
+      margin: 0 0 res(15, notebook);
+    }
+  }
+}

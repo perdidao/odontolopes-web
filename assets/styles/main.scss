@@ -1,0 +1,17 @@
+// Setup
+@import "general/reset";
+@import "general/mixins";
+@import "general/fonts";
+@import "general/variables";
+@import "general/layout";
+
+// Libs
+@import "vue-datetime/dist/vue-datetime.css";
+
+.v-application {
+  // Sections
+  @import "sections/header";
+
+  // Pages
+  @import "pages/auth";
+}

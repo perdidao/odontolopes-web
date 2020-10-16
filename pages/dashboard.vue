@@ -1,11 +1,7 @@
 <template>
   <section>
-    <h1>Dashboard</h1>
-    <nuxt-link to="/pacientes">Pacientes</nuxt-link>
-    <nuxt-link to="/clinicas">Clínicas</nuxt-link>
-    <nuxt-link to="/procedimentos">Procedimentos</nuxt-link>
-    <nuxt-link to="/consultas">Consultas</nuxt-link>
-    <nuxt-link to="/auth/logout">Sair</nuxt-link>
+    <h1 class="display-1">Dashboard</h1>
+    <p>Em breve</p>
   </section>
 </template>
 

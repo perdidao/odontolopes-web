@@ -1,28 +1,32 @@
 <template>
   <section class="patients">
-    <h1>Nova consulta</h1>
-
+    <h1 class="display-1">Nova consulta</h1>
+    <v-icon>mdi-calendar</v-icon>
+    Selecione uma data e hora
     <Datetime v-model="data.date" type="datetime"></Datetime>
-    <v-textarea v-model="data.notes" label="Observações" outlined />
+    <v-autocomplete
+      v-model="data.patient"
+      label="Selecione o paciente"
+      :items="patients"
+      item-text="name"
+      item-value="id"
+    ></v-autocomplete>
     <v-select
       v-model="data.procedures"
-      label="Procedimentos"
+      label="Procedimentos realizados"
       :items="procedures"
       item-text="title"
       item-value="id"
       multiple
     ></v-select>
-    <v-autocomplete
-      v-model="data.patient"
-      label="Pacientes"
-      :items="patients"
-      item-text="name"
-      item-value="id"
-    ></v-autocomplete>
-    <v-btn :disabled="loading" :loading="loading" @click="registerClinic"
+    <v-textarea v-model="data.notes" label="Observações" outlined />
+    <v-btn
+      :disabled="loading"
+      :loading="loading"
+      color="primary"
+      @click="registerClinic"
       >Cadastrar</v-btn
     >
-    <nuxt-link to="/consultas">Voltar para consultas</nuxt-link>
     <v-alert v-if="message.show" :type="message.type">
       {{ message.text }}
     </v-alert>

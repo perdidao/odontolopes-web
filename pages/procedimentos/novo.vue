@@ -1,7 +1,6 @@
 <template>
   <section class="patients">
-    <h1>Novo procedimento</h1>
-
+    <h1 class="display-1">Novo procedimento</h1>
     <v-text-field
       v-model="data.title"
       label="Título"
@@ -9,18 +8,22 @@
       hide-details
       type="text"
     />
-    <v-textarea v-model="data.description" label="Descrição" outlined />
     <v-text-field
       v-model="data.value"
-      label="Título"
+      label="Valor em reais"
+      prefix="R$"
       outlined
       hide-details
       type="number"
     />
-    <v-btn :disabled="loading" :loading="loading" @click="registerProcedure"
+    <v-textarea v-model="data.description" label="Descrição" outlined />
+    <v-btn
+      :disabled="loading"
+      :loading="loading"
+      color="primary"
+      @click="registerProcedure"
       >Cadastrar</v-btn
     >
-    <nuxt-link to="/procedimentos">Voltar para Procedimentos</nuxt-link>
     <v-alert v-if="message.show" :type="message.type">
       {{ message.text }}
     </v-alert>

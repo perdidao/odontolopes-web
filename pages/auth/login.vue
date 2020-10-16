@@ -27,6 +27,7 @@
         @click="submitLogin"
         >Entrar</v-btn
       >
+      <br v-if="message.show" />
       <v-alert v-if="message.show" :type="message.type">
         {{ message.text }}
       </v-alert>
@@ -38,6 +39,7 @@
 import { login } from "@/functions/auth";
 
 export default {
+  layout: "clean",
   data: () => ({
     loading: false,
     message: {
@@ -59,6 +61,5 @@ export default {
       login(this);
     },
   },
-  template: "clean",
 };
 </script>

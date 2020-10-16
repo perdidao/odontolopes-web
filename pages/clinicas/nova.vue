@@ -1,7 +1,6 @@
 <template>
-  <section class="patients">
-    <h1>Nova clínica</h1>
-
+  <section class="clinics">
+    <h1 class="display-1">Nova clínica</h1>
     <v-text-field
       v-model="data.title"
       label="Nome"
@@ -11,10 +10,13 @@
       prepend-inner-icon="mdi-account"
     />
     <v-textarea v-model="data.address" label="Endereço" outlined />
-    <v-btn :disabled="loading" :loading="loading" @click="registerClinic"
+    <v-btn
+      :disabled="loading"
+      :loading="loading"
+      color="primary"
+      @click="registerClinic"
       >Cadastrar</v-btn
     >
-    <nuxt-link to="/clinicas">Voltar para Clínicas</nuxt-link>
     <v-alert v-if="message.show" :type="message.type">
       {{ message.text }}
     </v-alert>

@@ -1,7 +1,6 @@
 <template>
   <section class="patients">
-    <h1>Novo paciente</h1>
-
+    <h1 class="display-1">Novo paciente</h1>
     <v-text-field
       v-model="data.name"
       label="Nome"
@@ -34,10 +33,13 @@
       label="Informações adicionais"
       outlined
     />
-    <v-btn :disabled="loading" :loading="loading" @click="registerPatient"
+    <v-btn
+      :disabled="loading"
+      :loading="loading"
+      color="primary"
+      @click="registerPatient"
       >Cadastrar</v-btn
     >
-    <nuxt-link to="/pacientes">Voltar para Pacientes</nuxt-link>
     <v-alert v-if="message.show" :type="message.type">
       {{ message.text }}
     </v-alert>

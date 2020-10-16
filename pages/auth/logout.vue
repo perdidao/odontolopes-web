@@ -1,6 +1,8 @@
 <template>
   <section class="auth">
-    <h1 class="auth-title">Você será desconectado</h1>
+    <v-progress-circular indeterminate="true" size="100" color="white"
+      ><img src="@/assets/images/symbol.png" width="70" alt=""
+    /></v-progress-circular>
   </section>
 </template>
 
@@ -8,6 +10,7 @@
 import Cookie from "js-cookie";
 
 export default {
+  layout: "clean",
   mounted() {
     const self = this;
     Cookie.remove("token");

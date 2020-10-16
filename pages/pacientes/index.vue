@@ -1,9 +1,11 @@
 <template>
   <section class="patients">
-    <h1>Pacientes</h1>
-    <nuxt-link to="/pacientes/novo">Novo paciente</nuxt-link>
-    <nuxt-link to="/dashboard">Dashboard</nuxt-link>
-
+    <div class="d-flex align-center justify-space-between">
+      <h1 class="display-1">Pacientes</h1>
+      <v-btn router fab elevation="0" color="primary" to="/pacientes/novo"
+        ><v-icon>mdi-plus</v-icon></v-btn
+      >
+    </div>
     <v-alert v-if="message.show" :type="message.type">
       {{ message.text }}
     </v-alert>

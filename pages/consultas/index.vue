@@ -51,7 +51,7 @@ export default {
     items: [],
   }),
   head: {
-    title: "Odontolopes — Consultas",
+    title: "Consultas",
   },
   mounted() {
     list(this);

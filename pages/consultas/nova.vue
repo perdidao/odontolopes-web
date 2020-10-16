@@ -62,7 +62,7 @@ export default {
     },
   }),
   head: {
-    title: "Odontolopes — Nova consulta",
+    title: "Nova consulta",
   },
   beforeMount() {
     listPatients(this);

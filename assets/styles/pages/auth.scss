@@ -4,18 +4,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $primary;
+  background-image: linear-gradient(45deg, $primary, $secondary);
 
   &-container {
     width: res(420);
-    padding: res(20);
+    padding: res(70) res(20) res(20);
     border-radius: res(10);
     background-color: $white;
     box-shadow: 0 res(10) res(20) rgba(0, 0, 0, 0.2);
+    position: relative;
 
     @media (max-width: $size-notebook) {
-      width: res(420, notebook);
-      padding: res(20, notebook);
+      width: res(360, notebook);
+      padding: res(70, notebook) res(20, notebook) res(20, notebook);
       border-radius: res(10, notebook);
       box-shadow: 0 res(10, notebook) res(20, notebook) rgba(0, 0, 0, 0.2);
     }
@@ -23,12 +24,26 @@
 
   &__logo {
     display: block;
-    max-width: res(240);
-    margin: 0 auto res(20);
+    width: res(120);
+    height: res(120);
+    padding: res(10);
+    border-radius: 50%;
+    position: absolute;
+    top: res(-40);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $white;
 
     @media (max-width: $size-notebook) {
-      max-width: res(240, notebook);
-      margin: 0 auto res(20, notebook);
+      width: res(120, notebook);
+      height: res(120, notebook);
+      padding: res(10, notebook);
+      top: res(-40, notebook);
+    }
+
+    img {
+      display: block;
+      width: 100%;
     }
   }
 

@@ -74,7 +74,7 @@ export default {
     },
   }),
   head: {
-    title: "Odontolopes — Novo paciente",
+    title: "Novo paciente",
   },
   methods: {
     registerPatient() {

@@ -34,7 +34,7 @@ export default {
     items: [],
   }),
   head: {
-    title: "Odontolopes — Clínicas",
+    title: "Clínicas",
   },
   mounted() {
     list(this);

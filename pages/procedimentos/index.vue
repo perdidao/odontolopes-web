@@ -35,7 +35,7 @@ export default {
     items: [],
   }),
   head: {
-    title: "Odontolopes — Procedimentos",
+    title: "Procedimentos",
   },
   mounted() {
     list(this);

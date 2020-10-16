@@ -51,7 +51,7 @@ export default {
     },
   }),
   head: {
-    title: "Odontolopes — Novo procedimento",
+    title: "Novo procedimento",
   },
   methods: {
     registerProcedure() {

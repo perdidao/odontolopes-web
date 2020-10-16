@@ -44,7 +44,7 @@ export default {
     },
   }),
   head: {
-    title: "Odontolopes — Nova clínica",
+    title: "Nova clínica",
   },
   methods: {
     registerClinic() {

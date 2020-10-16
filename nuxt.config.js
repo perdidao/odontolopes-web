@@ -9,14 +9,14 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: "%s",
-    title: "Odontolopes",
+    titleTemplate: "Odontopro — %s",
+    title: "Início",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
   },
 
   env: {
@@ -57,10 +57,10 @@ export default {
     theme: {
       dark: false,
       themes: {
-        dark: {
-          primary: "#cc3b84",
-          accent: "#aa3a6c",
-          secondary: "#3b45cc",
+        light: {
+          primary: "#6b9ad1",
+          accent: "#81e0ee",
+          secondary: "#81e0ee",
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,

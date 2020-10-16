@@ -21,7 +21,7 @@
     "js-cookie": "^2.2.1",
     "luxon": "^1.25.0",
     "moment": "^2.29.1",
-    "nuxt": "^2.14.6",
+    "nuxt": "^2.14.7",
     "prettier": "^2.1.2",
     "sass-loader": "^10.0.3",
     "vue-datetime": "^1.0.0-beta.14",

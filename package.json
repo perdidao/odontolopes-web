@@ -29,7 +29,7 @@
     "weekstart": "^1.0.1"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^4.0.0",
+    "@nuxtjs/eslint-config": "^5.0.0",
     "@nuxtjs/eslint-module": "^3.0.0",
     "@nuxtjs/vuetify": "^1.11.2",
     "babel-eslint": "^10.1.0",

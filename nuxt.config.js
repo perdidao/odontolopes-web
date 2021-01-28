@@ -20,8 +20,8 @@ export default {
   },
 
   env: {
-    api: "http://localhost:1337/",
-    auth: "http://localhost:1337/auth/local/",
+    api: "http://odontolopes.com/api/",
+    auth: "http://odontolopes.com/api/auth/local/",
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)

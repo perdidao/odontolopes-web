@@ -1,37 +1,42 @@
 <template>
   <section class="auth">
-    <div class="auth-container">
-      <div class="auth__logo">
-        <img src="@/assets/images/symbol.png" alt="Odontopro" />
+    <div class="auth__illustration"></div>
+    <section class="auth__container">
+      <div class="auth-form" @keydown.enter="submitLogin">
+        <div class="auth-form__logo">
+          <img src="@/assets/images/logo.png" alt="Odontolopes" />
+        </div>
+        <label class="auth-form__label">
+          Login
+          <input
+            v-model="formData.identifier"
+            type="text"
+            class="auth-form__input"
+            :readonly="loading"
+          />
+        </label>
+        <label class="auth-form__label">
+          Senha
+          <input
+            v-model="formData.password"
+            type="password"
+            class="auth-form__input"
+            :readonly="loading"
+          />
+        </label>
+        <v-alert v-if="message.show" :type="message.type">
+          {{ message.content }}
+        </v-alert>
+        <button
+          class="auth-form__button"
+          :class="{ loading: loading }"
+          :disabled="loading"
+          @click="submitLogin"
+        >
+          Entrar
+        </button>
       </div>
-      <v-text-field
-        v-model="formData.identifier"
-        label="Usuário"
-        outlined
-        hide-details
-        class="auth__input"
-      ></v-text-field>
-      <v-text-field
-        v-model="formData.password"
-        label="Senha"
-        outlined
-        hide-details
-        type="password"
-        class="auth__input"
-      ></v-text-field>
-      <v-btn
-        block
-        color="primary"
-        :disabled="loading"
-        :loading="loading"
-        @click="submitLogin"
-        >Entrar</v-btn
-      >
-      <br v-if="message.show" />
-      <v-alert v-if="message.show" :type="message.type">
-        {{ message.text }}
-      </v-alert>
-    </div>
+    </section>
   </section>
 </template>
 
@@ -45,7 +50,7 @@ export default {
     message: {
       show: false,
       type: "success",
-      text: "Bem-vindo(a) à Odontolopes",
+      content: "Bem-vindo(a) à Odontolopes",
     },
     formData: {
       identifier: "",

@@ -1,57 +1,120 @@
 .auth {
   width: 100vw;
   height: 100vh;
+  background-color: $white;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(45deg, $primary, $secondary);
 
-  &-container {
-    width: res(420);
-    padding: res(70) res(20) res(20);
-    border-radius: res(10);
-    background-color: $white;
-    box-shadow: 0 res(10) res(20) rgba(0, 0, 0, 0.2);
-    position: relative;
-
-    @media (max-width: $size-notebook) {
-      width: res(360, notebook);
-      padding: res(70, notebook) res(20, notebook) res(20, notebook);
-      border-radius: res(10, notebook);
-      box-shadow: 0 res(10, notebook) res(20, notebook) rgba(0, 0, 0, 0.2);
-    }
+  &__illustration {
+    width: 61.8vw;
+    height: 100vh;
+    background-color: $primary;
   }
 
-  &__logo {
-    display: block;
-    width: res(120);
-    height: res(120);
-    padding: res(10);
-    border-radius: 50%;
-    position: absolute;
-    top: res(-40);
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: $white;
+  &__container {
+    width: 38.2vw;
+    height: 100vh;
 
-    @media (max-width: $size-notebook) {
-      width: res(120, notebook);
-      height: res(120, notebook);
-      padding: res(10, notebook);
-      top: res(-40, notebook);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-form {
+    width: res(320);
+    max-width: 80%;
+
+    &__logo {
+      width: 80%;
+      margin-bottom: res(40);
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
     }
 
-    img {
+    &__label {
+      display: block;
+      font-size: res(18);
+      color: $black;
+      margin-bottom: res(20);
+    }
+
+    &__input {
       display: block;
       width: 100%;
+      height: res(40);
+      background-color: $silver;
+      border-bottom: 2px solid $lightgray;
+      padding: 0 res(10);
+      margin-top: res(5);
+      transition: $default-transition;
+      outline: none;
+
+      &:focus {
+        border-bottom-color: $primary;
+        color: $primary;
+      }
+
+      &:disabled,
+      &:read-only {
+        background-color: $lightgray;
+        border-bottom-color: $gray;
+        color: $gray;
+      }
+    }
+
+    &__button {
+      display: block;
+      float: right;
+      color: $primary;
+      padding: res(10) 0;
+      width: res(150);
+      border: 2px solid $primary;
+      border-radius: 20px;
+      font-weight: $bold;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      position: relative;
+      transition: $default-transition;
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+
+      &.loading {
+        pointer-events: none;
+        text-indent: -9999em;
+        background-color: $primary;
+
+        &:after {
+          content: " ";
+          display: block;
+          width: res(20);
+          height: res(20);
+          border-radius: 50%;
+          border: 3px solid transparent;
+          border-top-color: $white;
+          border-bottom-color: $white;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: res(-10) res(-10);
+          animation: rotating 600ms infinite;
+        }
+      }
     }
   }
+}
 
-  &__input.v-input {
-    margin: 0 0 res(15);
-
-    @media (max-width: $size-notebook) {
-      margin: 0 0 res(15, notebook);
-    }
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

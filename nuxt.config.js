@@ -9,7 +9,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: "Odontopro — %s",
+    titleTemplate: "Odontolopes — %s",
     title: "Início",
     meta: [
       { charset: "utf-8" },
@@ -20,8 +20,8 @@ export default {
   },
 
   env: {
-    api: "http://odontolopes.com/api/",
-    auth: "http://odontolopes.com/api/auth/local/",
+    api: "http://localhost:1337/",
+    auth: "http://localhost:1337/auth/local/",
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)

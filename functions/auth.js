@@ -23,7 +23,7 @@ export const login = (self) => {
       self.message = {
         show: true,
         type: "success",
-        text: "Login realizado com sucesso",
+        content: "Login realizado com sucesso",
       };
       self.loading = false;
       setTimeout(() => {
@@ -31,11 +31,11 @@ export const login = (self) => {
       }, 1000);
     })
     .catch((error) => {
-      const errorCode = error.response.status;
       self.message = {
         show: true,
         type: "error",
-        text: `Login ou senha inválidos. Código do erro: ${errorCode}`,
+        content: "Login ou senha inválidos",
+        error: error.response.status,
       };
       self.loading = false;
     });

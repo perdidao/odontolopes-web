@@ -19,7 +19,7 @@ export const login = (self) => {
     .then((response) => {
       const userData = response.data;
       Cookie.set("token", userData.jwt, { expires: 1, sameSite: "Strict" });
-      self.$store.commit("setUser", userData.user);
+      Cookie.set("user", userData.user, { expires: 1, sameSite: "Strict" });
       self.message = {
         show: true,
         type: "success",
@@ -39,4 +39,8 @@ export const login = (self) => {
       };
       self.loading = false;
     });
+};
+
+export const getUserData = () => {
+  return JSON.parse(Cookie.get("user"));
 };

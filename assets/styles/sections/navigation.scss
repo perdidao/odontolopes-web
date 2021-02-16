@@ -1,0 +1,64 @@
+.navigation {
+  position: fixed;
+  top: 110px;
+  left: res(30);
+  z-index: 999;
+  width: res(250);
+  height: calc(100vh - 140px);
+  border-radius: res(20);
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  @media (max-width: $size-notebook) {
+    top: 100px;
+    left: res(20, notebook);
+    width: res(250, notebook);
+    height: calc(100vh - 120px);
+    border-radius: res(20, notebook);
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: $gray;
+    width: 100%;
+    padding: res(10) res(20);
+    border-right: 0 solid $primary;
+    font-size: res(16);
+    margin: res(10) 0;
+    font-weight: $regular;
+    transition: $default-transition;
+
+    &:hover {
+      color: $primary;
+      border-right-width: res(5);
+      .navigation-link__icon {
+        background-color: $primary;
+      }
+    }
+
+    &.nuxt-link-active {
+      color: $primary;
+      font-weight: $bold;
+      border-right-width: res(5);
+
+      .navigation-link__icon {
+        background-color: $primary;
+      }
+    }
+
+    &__icon {
+      display: block;
+      width: res(24);
+      height: res(24);
+      margin-right: res(10);
+      border-radius: 50%;
+      background-color: $lightgray;
+      transition: $default-transition;
+    }
+  }
+}

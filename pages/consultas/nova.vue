@@ -1,6 +1,6 @@
 <template>
   <section class="patients">
-    <h1 class="display-1">Nova consulta</h1>
+    <h1 class="main-title">Nova consulta</h1>
     <v-icon>mdi-calendar</v-icon>
     Selecione uma data e hora
     <Datetime v-model="data.date" type="datetime"></Datetime>

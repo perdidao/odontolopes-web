@@ -1,6 +1,6 @@
 <template>
   <section class="patients">
-    <h1 class="display-1">Novo paciente</h1>
+    <h1 class="main-title">Novo paciente</h1>
     <v-text-field
       v-model="data.name"
       label="Nome"

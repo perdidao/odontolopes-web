@@ -1,6 +1,8 @@
 <template>
   <section class="clinics">
-    <h1 class="main-title">Nova clínica</h1>
+    <div class="page-header">
+      <h1 class="page-header__title">Nova clínica</h1>
+    </div>
     <v-text-field
       v-model="data.title"
       label="Nome"

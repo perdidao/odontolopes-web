@@ -1,0 +1,43 @@
+.page-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: res(30);
+
+  @media (max-width: $size-notebook) {
+    margin-bottom: res(20, notebook);
+  }
+
+  &__title {
+    font-size: res(32);
+    font-weight: $bold;
+    color: $black;
+
+    @media (max-width: $size-notebook) {
+      font-size: res(32, notebook);
+    }
+  }
+
+  &__button {
+    display: block;
+    padding: res(10) res(30);
+    border-radius: res(30);
+    border: 2px solid $secondary;
+    color: $secondary;
+    font-weight: $bold;
+    font-size: res(16);
+    transition: $default-transition;
+
+    @media (max-width: $size-notebook) {
+      padding: res(10, notebook) res(30, notebook);
+      border-radius: res(30, notebook);
+      font-size: res(16, notebook);
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $secondary;
+    }
+  }
+}

@@ -1,6 +1,8 @@
 <template>
   <section class="patients">
-    <h1 class="main-title">Novo procedimento</h1>
+    <div class="page-header">
+      <h1 class="page-header__title">Novo procedimento</h1>
+    </div>
     <v-text-field
       v-model="data.title"
       label="Título"

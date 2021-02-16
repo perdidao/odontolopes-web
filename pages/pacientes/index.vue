@@ -1,10 +1,8 @@
 <template>
   <section class="patients">
-    <div class="d-flex align-center justify-space-between">
-      <h1 class="main-title">Pacientes</h1>
-      <v-btn router fab elevation="0" color="primary" to="/pacientes/novo">
-        <v-icon>mdi-plus</v-icon>
-      </v-btn>
+    <div class="page-header">
+      <h1 class="page-header__title">Pacientes</h1>
+      <a href="/pacientes/novo" class="page-header__button">novo paciente</a>
     </div>
     <v-alert v-if="message.show" :type="message.type">
       {{ message.text }}

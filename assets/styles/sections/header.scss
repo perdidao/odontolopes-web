@@ -14,6 +14,10 @@
     display: block;
     padding: 10px res(20);
 
+    @media (max-width: $size-notebook) {
+      padding: 10px res(20, notebook);
+    }
+
     img {
       display: block;
       height: 60px;
@@ -30,16 +34,30 @@
     align-items: flex-start;
     justify-content: center;
 
+    @media (max-width: $size-notebook) {
+      min-width: res(200, notebook);
+      padding: 0 res(20, notebook);
+    }
+
     &__name {
       font-size: res(16);
       color: $black;
       font-weight: $bold;
       margin: 0 0 res(5);
+
+      @media (max-width: $size-notebook) {
+        font-size: res(16, notebook);
+        margin: 0 0 res(5, notebook);
+      }
     }
 
     &__logout {
       color: $primary;
       font-size: res(14);
+
+      @media (max-width: $size-notebook) {
+        font-size: res(14, notebook);
+      }
     }
   }
 }

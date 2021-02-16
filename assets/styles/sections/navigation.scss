@@ -33,11 +33,21 @@
     font-weight: $regular;
     transition: $default-transition;
 
+    @media (max-width: $size-notebook) {
+      padding: res(10, notebook) res(20, notebook);
+      font-size: res(16, notebook);
+      margin: res(10, notebook) 0;
+    }
+
     &:hover {
       color: $primary;
       border-right-width: res(5);
       .navigation-link__icon {
         background-color: $primary;
+      }
+
+      @media (max-width: $size-notebook) {
+        border-right-width: res(5, notebook);
       }
     }
 
@@ -45,6 +55,10 @@
       color: $primary;
       font-weight: $bold;
       border-right-width: res(5);
+
+      @media (max-width: $size-notebook) {
+        border-right-width: res(5, notebook);
+      }
 
       .navigation-link__icon {
         background-color: $primary;
@@ -59,6 +73,12 @@
       border-radius: 50%;
       background-color: $lightgray;
       transition: $default-transition;
+
+      @media (max-width: $size-notebook) {
+        width: res(24, notebook);
+        height: res(24, notebook);
+        margin-right: res(10, notebook);
+      }
     }
   }
 }

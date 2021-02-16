@@ -18,7 +18,7 @@ export const dailyAppointments = (self) => {
       const today = moment();
 
       const todayAppointments = appointments.filter((ap) => {
-        return moment(ap.date) > today;
+        return moment(ap.date) > today && moment(ap.date).isSame(today, "day");
       });
 
       self.items = todayAppointments;

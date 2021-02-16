@@ -9,7 +9,9 @@
         class="dashboard-appointments__item"
       >
         <p class="dashboard-appointments__name">{{ item.patient.name }}</p>
-        {{ Moment(item.date).fromNow() }}
+        <p class="dashboard-appointments__date">
+          {{ Moment(item.date).fromNow() }}
+        </p>
       </li>
     </ul>
     <p v-if="!loading && items.length === 0">

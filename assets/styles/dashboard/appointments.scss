@@ -1,5 +1,58 @@
 .dashboard-appointments {
   background-color: $white;
-  padding: res(20);
+  padding: res(10) res(20);
   border-radius: res(20);
+
+  @media (max-width: $size-notebook) {
+    padding: res(10, notebook) res(20, notebook);
+    border-radius: res(20, notebook);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: res(10) 0;
+    border-bottom: 1px solid $lightgray;
+
+    @media (max-width: $size-notebook) {
+      padding: res(10, notebook) 0;
+    }
+
+    &:last-of-type {
+      border: 0;
+    }
+  }
+
+  &__name {
+    margin: 0 0 res(5);
+    font-size: res(14);
+    font-weight: $bold;
+    color: $black;
+
+    @media (max-width: $size-notebook) {
+      margin: 0 0 res(5, notebook);
+      font-size: res(14, notebook);
+    }
+  }
+
+  &__procedures {
+    margin: 0;
+    font-size: res(12);
+    color: $gray;
+
+    @media (max-width: $size-notebook) {
+      font-size: res(12, notebook);
+    }
+  }
+
+  &__date {
+    margin: 0;
+    font-size: res(14);
+    color: $primary;
+
+    @media (max-width: $size-notebook) {
+      font-size: res(14, notebook);
+    }
+  }
 }

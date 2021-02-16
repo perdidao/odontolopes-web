@@ -1,0 +1,17 @@
+.dashboard {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  &-block {
+    min-width: 33%;
+
+    &__title {
+      font-size: res(24);
+      font-weight: $light;
+      color: $gray;
+      margin-bottom: res(10);
+    }
+  }
+}

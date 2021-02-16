@@ -5,7 +5,7 @@ export const listPatients = (self) => {
   self.loading = true;
   const settings = {
     method: "GET",
-    url: `${process.env.api}patients`,
+    url: `${process.env.api}/patients`,
     headers: {
       Authorization: `Bearer ${userToken()}`,
       "Content-Type": "application/json",
@@ -31,7 +31,7 @@ export const listProcedures = (self) => {
   self.loading = true;
   const settings = {
     method: "GET",
-    url: `${process.env.api}procedures`,
+    url: `${process.env.api}/procedures`,
     headers: {
       Authorization: `Bearer ${userToken()}`,
       "Content-Type": "application/json",

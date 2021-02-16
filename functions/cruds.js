@@ -5,7 +5,7 @@ export const list = (self) => {
   self.loading = true;
   const settings = {
     method: "GET",
-    url: `${process.env.api}${self.endpoint}`,
+    url: `${process.env.api}/${self.endpoint}`,
     headers: {
       Authorization: `Bearer ${userToken()}`,
       "Content-Type": "application/json",
@@ -31,7 +31,7 @@ export const register = (self) => {
   self.loading = true;
   const settings = {
     method: "POST",
-    url: `${process.env.api}${self.endpoint}`,
+    url: `${process.env.api}/${self.endpoint}`,
     data: JSON.stringify(self.data),
     headers: {
       Authorization: `Bearer ${userToken()}`,

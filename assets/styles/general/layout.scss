@@ -3,18 +3,19 @@
   line-height: 1.2;
 }
 
+#app.v-application,
 body {
-  background-color: $white;
+  background-color: $silver;
   color: $black;
   font-family: $default-font;
   font-weight: 400;
   font-size: res(16);
 
-  @media all and (max-width: $size-notebook) {
+  @media (max-width: $size-notebook) {
     font-size: res(16, notebook);
   }
 
-  @media all and (max-width: $size-mobile) {
+  @media (max-width: $size-mobile) {
     font-size: res(16, mobile);
   }
 }
@@ -22,4 +23,32 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
+  font-weight: $bold;
+}
+
+.main {
+  padding: 110px res(30) 30px res(310);
+
+  @media (max-width: $size-notebook) {
+    padding: 100px 0 res(20, notebook) res(290, notebook);
+  }
+
+  &-title {
+    font-size: res(32);
+    font-weight: $bold;
+    color: $black;
+
+    @media (max-width: $size-notebook) {
+      font-size: res(32, notebook);
+    }
+  }
 }

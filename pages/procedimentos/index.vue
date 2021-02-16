@@ -1,10 +1,10 @@
 <template>
   <section class="patients">
     <div class="d-flex align-center justify-space-between">
-      <h1 class="display-1">Procedimentos</h1>
-      <v-btn router fab elevation="0" color="primary" to="/procedimentos/novo"
-        ><v-icon>mdi-plus</v-icon></v-btn
-      >
+      <h1 class="main-title">Procedimentos</h1>
+      <v-btn router fab elevation="0" color="primary" to="/procedimentos/novo">
+        <v-icon>mdi-plus</v-icon>
+      </v-btn>
     </div>
     <v-alert v-if="message.show" :type="message.type">
       {{ message.text }}

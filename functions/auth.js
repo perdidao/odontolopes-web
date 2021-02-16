@@ -19,11 +19,11 @@ export const login = (self) => {
     .then((response) => {
       const userData = response.data;
       Cookie.set("token", userData.jwt, { expires: 1, sameSite: "Strict" });
-      self.$store.commit("setUser", userData.user);
+      Cookie.set("user", userData.user, { expires: 1, sameSite: "Strict" });
       self.message = {
         show: true,
         type: "success",
-        text: "Login realizado com sucesso",
+        content: "Login realizado com sucesso",
       };
       self.loading = false;
       setTimeout(() => {
@@ -31,12 +31,16 @@ export const login = (self) => {
       }, 1000);
     })
     .catch((error) => {
-      const errorCode = error.response.status;
       self.message = {
         show: true,
         type: "error",
-        text: `Login ou senha inválidos. Código do erro: ${errorCode}`,
+        content: "Login ou senha inválidos",
+        error: error.response.status,
       };
       self.loading = false;
     });
+};
+
+export const getUserData = () => {
+  return JSON.parse(Cookie.get("user"));
 };

@@ -11,6 +11,7 @@
 .v-application {
   // Sections
   @import "sections/header";
+  @import "sections/navigation";
 
   // Pages
   @import "pages/auth";

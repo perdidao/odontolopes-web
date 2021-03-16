@@ -26,7 +26,7 @@
     "sass-loader": "^11.0.1",
     "vue-datetime": "^1.0.0-beta.14",
     "vue-the-mask": "^0.11.1",
-    "weekstart": "^1.0.1"
+    "weekstart": "^1.1.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",

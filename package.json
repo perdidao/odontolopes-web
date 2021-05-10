@@ -21,8 +21,8 @@
     "js-cookie": "^2.2.1",
     "luxon": "^1.26.0",
     "moment": "^2.29.1",
-    "nuxt": "^2.15.4",
     "prettier": "^2.3.0",
+    "nuxt": "^2.15.5",
     "sass-loader": "^11.0.1",
     "vue-datetime": "^1.0.0-beta.14",
     "vue-the-mask": "^0.11.1",
@@ -33,7 +33,7 @@
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/vuetify": "^1.11.3",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.25.0",
+    "eslint": "^7.26.0",
     "eslint-plugin-nuxt": "^2.0.0"
   }
 }

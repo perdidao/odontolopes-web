@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
-    "core-js": "^3.18.1",
+    "core-js": "^3.18.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-vue": "^7.18.0",
